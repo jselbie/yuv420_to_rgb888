@@ -48,12 +48,12 @@ def yuv420_to_rgb888(width, height, yuv):
 
 
 def testConversion(source, dest):
-    print("opening file");
+    print("opening file")
     f = open(source, "rb")
     yuv = f.read()
     f.close()
 
-    print("read file");
+    print("read file")
     rgb_bytes = yuv420_to_rgb888(1920,1088, yuv)
     # cProfile.runctx('yuv420_to_rgb888(1920,1088, yuv)', {'yuv420_to_rgb888':yuv420_to_rgb888}, {'yuv':yuv})
     print("finished conversion. Creating image object")
